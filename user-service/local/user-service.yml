@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: payment-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -15,7 +13,7 @@ spring:
     show-sql: true
 
 server:
-  port: 8083
+  port: 8081
 
 security:
   enabled: false
@@ -27,8 +25,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-
-order:
-  api:
-    endpoint:
-      baseURL: http://order-service/orders
