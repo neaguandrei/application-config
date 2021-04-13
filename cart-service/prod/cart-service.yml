@@ -13,10 +13,10 @@ spring:
     show-sql: true
 
 server:
-  port: 8082
+  port: 8085
 
 security:
-  enabled: true
+  enabled: false
   user-url: http://user-service/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
