@@ -16,7 +16,7 @@ server:
   port: 8081
 
 security:
-  enabled: false
+  enabled: true
   user-url: http://user-service/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
