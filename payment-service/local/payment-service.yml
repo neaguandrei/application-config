@@ -17,7 +17,7 @@ server:
 
 security:
   enabled: true
-  user-url: http://user-service/{email}
+  user-url: http://user-service/auth/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
 
