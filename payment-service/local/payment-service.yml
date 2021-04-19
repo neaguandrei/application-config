@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-    url: jdbc:mysql://localhost:3308/FMI
+    url: jdbc:mysql://localhost:3308/PAYMENT
   jpa:
     hibernate:
       ddl-auto: none
