@@ -16,8 +16,8 @@ server:
   port: 8082
 
 security:
-  enabled: false
-  user-url: http://user-service/auth/{email}
+  enabled: true
+  user-url: http://user-service/api/auth/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
 
@@ -26,5 +26,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
+payment:
+  api:
+    endpoint:
+      baseURL: http://payment-service/api/payments
 
 

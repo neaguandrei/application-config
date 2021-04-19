@@ -17,7 +17,7 @@ server:
 
 security:
   enabled: true
-  user-url: http://user-service/auth/{email}
+  user-url: http://user-service/api/auth/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
 
@@ -29,6 +29,6 @@ eureka:
 payment:
   api:
     endpoint:
-      baseURL: http://payment-service/payments
+      baseURL: http://payment-service/api/payments
 
 

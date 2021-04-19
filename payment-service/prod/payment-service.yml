@@ -16,8 +16,8 @@ server:
   port: 8083
 
 security:
-  enabled: false
-  user-url: http://user-service/auth/{email}
+  enabled: true
+  user-url: http://user-service/api/auth/{email}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
 
@@ -29,4 +29,4 @@ eureka:
 order:
   api:
     endpoint:
-      baseURL: http://order-service/orders
+      baseURL: http://order-service/api/orders
