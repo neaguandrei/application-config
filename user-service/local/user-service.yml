@@ -18,6 +18,7 @@ server:
 security:
   enabled: true
   user-url: http://user-service/api/auth/{email}
+  refresh-token-url: http://user-service/api/auth/refresh-token/{refresh_token}
   jwt-expiration: 864000000
   jwt-secret: secretKeyToProviderJWT
 
