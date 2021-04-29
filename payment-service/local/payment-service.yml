@@ -32,3 +32,7 @@ order:
   api:
     endpoint:
       baseURL: http://order-service/api/orders
+
+stripe:
+  secret:
+    key: sk_test_51IlWckJzkum7wBgLFBAVxxeEKL6FsT3d93o5VRPxSooslR3uxP4Cc37RgEJXA3apycRB2ZtzPLfCjffXEyyYznk400exJVhiEO
