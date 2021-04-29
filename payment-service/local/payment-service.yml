@@ -37,8 +37,28 @@ stripe:
   secret:
     key: sk_test_51IlWckJzkum7wBgLFBAVxxeEKL6FsT3d93o5VRPxSooslR3uxP4Cc37RgEJXA3apycRB2ZtzPLfCjffXEyyYznk400exJVhiEO
 
-paypal:
-  client:
-    id: AYSq3RDGsmBLJE-otTkBtM-jBRd1TCQwFf9RGfwddNXWz0uFU9ztymylOhRS
-    secret: EGnHDxD_qRPdaLdZz8iCr8N7_MzF-YHPTkjs6NKYQvQSBngp4PTTVWkPZRbL
-  mode: sandbox
+resilience4j:
+  circuitbreaker:
+    instances:
+      orderService:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        waitDurationInOpenState: 5s
+        slidingWindowType: COUNT_BASED
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
