@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3308/CATALOG
+    password: rootroot
+    url: jdbc:mysql://database.ctbm0ndsgw80.eu-central-1.rds.amazonaws.com:3306/CATALOG
   jpa:
     hibernate:
       ddl-auto: none
