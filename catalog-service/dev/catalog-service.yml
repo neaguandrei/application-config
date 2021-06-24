@@ -33,4 +33,10 @@ payment:
     endpoint:
       baseURL: http://payment-service/api/payments/processor/stripe
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 
