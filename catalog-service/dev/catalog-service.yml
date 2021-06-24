@@ -31,6 +31,6 @@ eureka:
 payment:
   api:
     endpoint:
-      baseURL: http://payment-service/api/payments/stripe
+      baseURL: http://payment-service/api/payments/processor/stripe
 
 
